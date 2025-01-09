@@ -1,15 +1,25 @@
 {
+  "name": "php-hive-game/hive",
+  "description": "Hive game in php",
+  "license": "MIT",
   "require": {
-    "php": ">=8.3",
+    "php": "^8.3",
     "ext-mysqli": "*",
     "symfony/dotenv": "^7.0"
   },
   "autoload": {
     "psr-4": {
-      "Hive\\": "src"
+      "Hive\\": "src",
+      "Test\\": "tests"
     }
   },
   "require-dev": {
-    "phpunit/phpunit": "11"
+    "phpunit/phpunit": "11",
+    "squizlabs/php_codesniffer": "^3.11",
+    "mockery/mockery": "^1.6"
+  },
+  "scripts":{
+    "test": "./vendor/bin/phpunit --coverage-clover ./.qodana/code-coverage/coverage.xml --configuration phpunit.xml",
+    "phpcs": "phpcs --standard=PSR2"
   }
 }

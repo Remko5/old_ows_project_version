@@ -19,7 +19,7 @@ final class TempTest extends TestCase
     #[DataProvider('switchPlayerProvider')]
     public function testSwitchPlayer(int $player, int $expectedResult): void
     {
-        $result = $player - 1;
+        $result = 1 - $player;
         $this->assertEquals($expectedResult, $result);
     }
 }

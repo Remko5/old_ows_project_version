@@ -7,11 +7,12 @@ use PHPUnit\Framework\TestCase;
 
 final class TempTest extends TestCase
 {
-    public static function addTileToBoardProvider(): array
+    public static function switchPlayerProvider(): array
     {
         return
         [
-            [1, 0], [0,1];
+            [1, 0], 
+            [0, 1]
         ];
     }
 
